@@ -1,4 +1,13 @@
 % Created on Sun Feb 27 22:12 PDT 2011
+
+%----------------------------------------------------------------------------
+%If there are any errors or anything you want to praise/complain about please
+%feel free to contact me at thenewmikemoral [at] aol [dot] com.
+%
+%This file is based on a public domain score is is released under the
+%Creative Commons Attribution ShareAlike 3.0 License.
+%----------------------------------------------------------------------------
+
 \version "2.12.3"  
 
 \header {
@@ -7,7 +16,7 @@
  	composer = "Gustav Holst" 
  	opus = "Op. 28" 
  	instrument = \markup { "B" \flat "Trumpets" }
- 	copyright = \markup { \small "© 2011 Michael Morales under the terms of the Creative Commons Attribution BY-SA 3.0 license" }
+ 	copyright = \markup { \small "© 2011 Michael Morales under the terms of the Creative Commons Attribution ShareAlike 3.0 license" }
  	tagline = "Typeset by Michael Morales using LilyPond."
  	}
  	

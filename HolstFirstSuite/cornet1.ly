@@ -1,4 +1,13 @@
 % Created on Wed Jun 02 17:25:32 PDT 2010
+
+%----------------------------------------------------------------------------
+%If there are any errors or anything you want to praise/complain about please
+%feel free to contact me at thenewmikemoral [at] aol [dot] com.
+%
+%This file is based on a public domain score is is released under the
+%Creative Commons Attribution ShareAlike 3.0 License.
+%----------------------------------------------------------------------------
+
 \version "2.12.3"  
 
 \header {
@@ -8,7 +17,7 @@
  	date = "First Cornet"
  	opus = "Op. 28" 
  	instrument = \markup { "1st Cornet in B" \flat }
- 	copyright = \markup { \small "© 2010 Michael Morales under the terms of the Creative Commons Attribution BY-SA 3.0 license" }
+ 	copyright = \markup { \small "Â© 2010 Michael Morales under the terms of the Creative Commons Attribution ShareAlike 3.0 license" }
  	tagline = "Typeset by Michael Morales using LilyPond."
  	}
 
