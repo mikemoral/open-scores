@@ -1,5 +1,5 @@
 % Created on Wed Jun 02 17:25:32 PDT 2010
-\version "2.12.3"
+\version "2.12.3" 
 
 \header {
 	title = \markup { "First Suite in E-flat" } 
@@ -8,9 +8,8 @@
  	date = "First Cornet"
  	opus = "Op. 28" 
  	instrument = \markup { "1st Cornet in B" \flat }
- 	copyright = \markup { \small "© 2010 Michael Morales under the terms of the Creative Commons Attribution BY-SA 3.0 license" }
+ 	copyright = \markup { \small "� 2010 Michael Morales under the terms of the Creative Commons Attribution BY-SA 3.0 license" }
  	tagline = "Typeset by Michael Morales using LilyPond."
- 	%copyright = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music is free to download, with the freedom to distribute, modify and perform. } \line { \small \line { Typeset using LilyPond } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2010. \hspace #0.5 } } \line { \teeny \line { Licensed under the Creative Commons Attribution 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by/3.0" http://creativecommons.org/licenses/by/3.0 } } } }
  	}
 
 %\include "book-titling.ily"  
