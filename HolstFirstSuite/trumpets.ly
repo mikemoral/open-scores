@@ -29,7 +29,9 @@ staffTrumpetInBb = \new Staff {
 	\partial 4 r4
 	R2.*24
 	R2.*6
-	r8 <c c'>
+	r8 <c c'>16-\mf <c c'> <c c'>8[ <c c'>16 <c c'>] <c c'>8[ <c c'>16 <c c'>]
+	<c c'>8[ <c c'>16 <c c'>] <c c'>8[ <c c'>16 <c c'>] r8 <f f'>8
+	r8 <d d'>16 <d d'> <d d'>8 <d d'> r8 a'
 	}
 }
 
