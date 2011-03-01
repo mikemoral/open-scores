@@ -6,6 +6,8 @@
 %
 %This file is based on a public domain score is is released under the
 %Creative Commons Attribution ShareAlike 3.0 License.
+%
+%Last updated 28 Feb 2011
 %----------------------------------------------------------------------------
 
 \version "2.12.3"  
@@ -32,15 +34,22 @@ staffTrumpetInBb = \new Staff {
 	\relative c' { 	
 	% Rest measures contracted to single measure
 	\compressFullBarRests
-	\override Score.BarNumber #'break-visibility = #'#(#t #t #t)
+	%\override Score.BarNumber #'break-visibility = #'#(#t #t #t)
 	\bar ""  % Permit first bar number to be printed
 	\tempo "Allegro moderato"
 	\partial 4 r4
 	R2.*24
 	R2.*6
 	r8 <c c'>16-\mf <c c'> <c c'>8[ <c c'>16 <c c'>] <c c'>8[ <c c'>16 <c c'>]
-	<c c'>8[ <c c'>16 <c c'>] <c c'>8[ <c c'>16 <c c'>] r8 <f f'>8
-	r8 <d d'>16 <d d'> <d d'>8 <d d'> r8 a'
+	<c c'>8[ <c c'>16 <c c'>] <c c'>8[ <c c'>16 <c c'>] r8 <f f'>8-\f
+	r8 <d d'>16 <d d'> <d d'>8 <d d'> r8 <a' a>
+	r8 <c, c'>16 <c c'> <c c'>8 <c c'> r8 <c c'>
+	r8 <f f'>16 <f f'> <f f'>8 <f f'> r8 <f f'>
+	r8 <c c'>16 <c c'> <c c'>8 <c c'> r8 <c c'>
+	r8 <d d'>16 <d d'> <d d'>8 <d d'> r8 <bes' bes,>
+	r8 <c, c'>16 <c c'> <f f'>8 <f f'> r8 <f f'>
+	r8 <c c'>16 <c c'> <c c'>8 r8 <c c'> r8
+	r4 <c c'>8 r8 <c c'>\ff r8 %ended before Brillante
 	}
 }
 
