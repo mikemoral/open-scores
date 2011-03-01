@@ -22,13 +22,6 @@
  	copyright = \markup { \small "© 2010 Michael Morales under the terms of the Creative Commons Attribution ShareAlike 3.0 license" }
  	tagline = "Typeset by Michael Morales using LilyPond."
  	}
-
-%\include "book-titling.ily"  
-%\bookTitle "First Suite in E"
-% \useRehearsalNumbers ##t
-% \pageBreak
-%  \markuplines \table-of-contents
-%  \chapter "I. Chaconne"
   
 cpap = \markup {\italic "cres. poco a poco"}
 solo = \mark \markup { \small "Solo" }
