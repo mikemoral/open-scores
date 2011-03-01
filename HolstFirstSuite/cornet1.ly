@@ -6,6 +6,8 @@
 %
 %This file is based on a public domain score is is released under the
 %Creative Commons Attribution ShareAlike 3.0 License.
+%
+%Last updated 28 Feb 2011
 %----------------------------------------------------------------------------
 
 \version "2.12.3"  
@@ -29,10 +31,15 @@
 %  \chapter "I. Chaconne"
   
 cpap = \markup {\italic "cres. poco a poco"}
+solo = \mark \markup { \small "Solo" }
+soli = \markup { \small "Soli" }
+bril = \markup { \small \bold \italic "Brillante"}
+maes = \markup { \small \bold \italic "Maestoso" }
+lega = \markup { \small \italic "legato" }
  
 staffTrumpetInBb = \new Staff {
 	\time 3/4
-	\set Staff.instrumentName = \markup { "B" \flat "Cornet" }
+	\set Staff.instrumentName = \markup { "1st B" \flat "Cornet" }
 	\set Staff.midiInstrument = "trumpet"
 	\transposition ais,
 	\key f \major
@@ -40,12 +47,12 @@ staffTrumpetInBb = \new Staff {
 	\relative c' { 	
 	% Rest measures contracted to single measure
 	\compressFullBarRests
-	\override Score.BarNumber #'break-visibility = #'#(#t #t #t)
+	%\override Score.BarNumber #'break-visibility = #'#(#t #t #t)
 	\bar ""  % Permit first bar number to be printed
 	\tempo "Allegro moderato"
 	\partial 4 r4
 	R2.*7
-	r4 r4 \p a'4_"legato"(~
+	r4 r4 \p a'4_\lega(~
 	a4 g f
 	g2) c4( ~
 	c f, g
@@ -53,7 +60,7 @@ staffTrumpetInBb = \new Staff {
 	e4. ( f8 e[ f]
 	g2( f8 )) r8
 	R2.*8
-	r4 r4 \mark \markup { \smaller "Solo" } g8\mf[ g16 g16]
+	r4 r4 \solo g8\mf[ g16 g16]
 	g8 r8 r4 c8[ c16 c]
 	d8 r8 r4 d8[ d16 d]
 	e8 r8 r4 e8[ e16 e]
@@ -67,7 +74,7 @@ staffTrumpetInBb = \new Staff {
 	r8 c,16 e f8 d r8 a'8
 	r8 g16_"cres." a bes8 a16 bes c8 bes16 c
 	d8 c16 d e8 d16 e f8 r8
-	\tempo "Brillante" e8 r8 r4 f8 r8
+	e8^\bril r8 r4 f8 r8
 	g8 r8 r4 c,8 r8
 	f8 r8 b,8 r8 r4
 	c8 r8 r4 c8 r8
@@ -84,7 +91,7 @@ staffTrumpetInBb = \new Staff {
 	<c c'>2._"dim." ~
 	<c  c'>2 \> r4 \!
 	R2.*23
-	r2 \mark \markup { \small "Soli" } f,4\p^\markup { \italic \small "Pesante"  } 
+	r2 f,4\p^\markup { \italic \small "Pesante"  }^\soli
 	e2 a,4
 	bes2 d4
 	f e2
@@ -93,7 +100,7 @@ staffTrumpetInBb = \new Staff {
 	g4 d e
 	a,2 r4
 	R2.*8
-	r2 \mark \markup { \small "Soli" } f'4-\p (
+	r2 f'4-\p^\soli (
 	g2 d'4
 	c2) a4(
 	f4 g2
@@ -111,7 +118,7 @@ staffTrumpetInBb = \new Staff {
 	bes4( a) c(
 	bes) d( c)
 	f( e) a,-\ff ( ~
-	\tempo "Maestoso" a g f
+	a^\maes g f
 	g2) f'4 ~
 	f e d
 	e d <c c'>4 ~ <c c'>
