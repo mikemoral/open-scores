@@ -4,7 +4,7 @@
 %If there are any errors or anything you want to praise/complain about please
 %feel free to contact me at thenewmikemoral [at] aol [dot] com.
 %
-%This file is based on a public domain score is is released under the
+%This file is based on a public domain score is released under the
 %Creative Commons Attribution ShareAlike 3.0 License.
 %
 %Last updated 28 Feb 2011
