@@ -7,7 +7,7 @@
 %This file is based on a public domain score is released under the
 %Creative Commons Attribution ShareAlike 3.0 License.
 %
-%Last updated 28 Feb 2011
+%Last updated 6 Mar 2011
 %----------------------------------------------------------------------------
 
 \version "2.12.3"  
@@ -22,7 +22,7 @@
  	tagline = "Typeset by Michael Morales using LilyPond."
  	}
  	
-cpap = \markup {\italic "cres. poco a poco"}
+cpap = \markup { \small \italic "cres. poco a poco"}
 solo = \mark \markup { \small "Solo" }
 soli = \markup { \small "Soli" }
 bril = \markup { \small \bold \italic "Brillante"}
@@ -31,6 +31,7 @@ lega = \markup { \small \italic "legato" }
 adue = \markup { \small "a2" }
 tenu = \markup { \small \italic "ten." }
 dim  = \markup { \small \italic "dim." }
+rit  = \markup { \small \italic "rit. al fine" }
  
 staffTrumpetInBb = \new Staff {
 	\time 3/4
@@ -78,7 +79,32 @@ staffTrumpetInBb = \new Staff {
 	R2.*16
 	R2.*6
 	f,2.^\adue-\p ~
-	f2. %1 after "e"
+	f2. \break
+	c2.^\cpap^\markup { \center-column { \small \bold 1} } ~
+	c2.^\markup { \center-column { \small \bold 2} } ~
+	c2.^\markup { \center-column { \small \bold 3} } ~
+	c2.^\markup { \center-column { \small \bold 4} } ~
+	c2.^\markup { \center-column { \small \bold 5} } ~
+	c2.^\markup { \center-column { \small \bold 6} } ~
+	c2.^\markup { \center-column { \small \bold 7} } ~
+	c2.^\markup { \center-column { \small \bold 8} } ~
+	c2 f4-\ff
+	bes2^\maes <f f'>4( ~
+	<f f'>4 <e e'>4) <f c'>4(
+	<a c>) <g c> <f b>
+	<e c'>2 <e c'>4(
+	<f c'>2) <g bes>4
+	<e c'> <g bes>2
+	g4^\adue ( a bes
+	c d e)
+	<f, f'>2^\rit r4
+	R2.*4
+	r4 r4 <f f'>4-> ~
+	<f f'>2 <f f'>4-> ~
+	<f f'>2. ~
+	<f f'>4 <d' g>2
+	<c c'>2.-\fermata
+	
 	}
 }
 
