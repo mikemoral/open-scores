@@ -6,7 +6,12 @@
 %This file is based on a public domain score is released under the
 %Creative Commons Attribution ShareAlike 3.0 License.
 %
-%Last updated 29 May 2011 at 20:26 PST
+%Last updated 29 May 2011 at 22:35 PST
+%----------------------------------------------------------------------------
+%----------------------------------------------------------------------------
+% TO DO LIST:
+%	1. Resolve (de)cresendo issues
+%	2. Resolve MIDI times issue
 %----------------------------------------------------------------------------
 
 \version "2.12.3"
@@ -30,14 +35,34 @@ staffTrumpetI=\new Staff {
 	\clef treble
 	\relative c' { 	
 		r4 c''4-\f ~ \times 2/3 { c8-. b-. c-. } \times 2/3 { b-. a-. b-. }
-		\times 2/3 { a g a } eis2( g4)
+		\times 2/3 { a g a } eis2-\sf( \< g4) \!
 		r4 c4-^ ~ \times 2/3 { c8 b c } \times 2/3 { b a b }
-		\times 2/3 { a g a } f4 ~ f8.[ f32 f] g8.[ g32 g]
-		a4 f4-^ ~ f8.[ f32 f] f8.[ f32 f]
+		\times 2/3 { a g a } f4-\sf ~ f8.[\< f32 f] g8.[ g32 g]
+		a4 \! f4-^ ~ f8.[ f32 f] f8.[ f32 f]
 		e8.[ e32 e] e8.[ e32 e] \times 2/3 { a8 e c } \times 2/3 { e a e }
 		fis8.[ fis32 fis]\< a2.~
 		a2 ~ a4-.-\ff \! r4
 
+	\bar "|."
+	}
+}
+
+staffTrumpetII = \new Staff {
+	\time 4/4
+	\set Staff.instrumentName = "Bb Tpt. 2"
+	\set Staff.midiInstrument = "trumpet"
+	\transposition ais,
+	\key c \major
+	\clef treble
+	\relative c' {
+		r4 g''4-\f ~ \times 2/3 { g8 f g } \times 2/3 { f e f }
+		\times 2/3 { e d e } e2.-\sf \<
+		r4 \! g4-^ ~ \times 2/3 { g8 f g } \times 2/3 { f e f }
+		\times 2/3 { e d e } e4-\sf ~ e8.[\< e32 e] e8.[ e32 e]
+		e4 c4-^ ~ c8.[ c32 c32] \times 2/3 { c8[ b c] }
+		\times 2/3 { cis8 \! b cis } \times 2/3 { cis8 b cis } \times 2/3 { cis8 b cis } \times 2/3 { b cis b }
+		d4 ~ d8.[ \< a32 a] a8.[ d32 d] d8.[ fis32 fis]
+		fis2 ~ fis4-\ff-. \! r4
 	\bar "|."
 	}
 }
@@ -50,7 +75,7 @@ staffTrumpetIV = \new Staff {
 	\clef treble
 	\relative c' { 	
 		c4-\f ~ c8.[ c32 c] c4 ~ \times 2/3 { c8 e c }
-		\times 2/3 { f8 e-. f } g2-\sf( \> e4) \!
+		\times 2/3 { f8 e-. f } g2-\sf( \< e4) \!
 		c8.[ c32 c] g'8.[ c,32 c] c4 ~ \times 2/3 { c8 e c }
 		\times 2/3 { f8 g f } g8.-\sf[ g32 g] g8.[\< g32 g] e8.[ e32 e]\!
 		a4 r8. e32 e cis8.[ e32 e] a8.[ e32 e]
@@ -83,6 +108,7 @@ staffPercussion = \new DrumStaff {
 \score {
 	<<
 		\staffTrumpetI
+		\staffTrumpetII
 		\staffTrumpetIV
 		\staffPercussion
 	>>
