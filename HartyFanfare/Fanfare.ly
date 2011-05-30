@@ -6,7 +6,7 @@
 %This file is based on a public domain score is released under the
 %Creative Commons Attribution ShareAlike 3.0 License.
 %
-%Last updated 29 May 2011 at 22:35 PST
+%Last updated 30 May 2011 at 13:49 PST
 %----------------------------------------------------------------------------
 %----------------------------------------------------------------------------
 % TO DO LIST:
@@ -19,8 +19,8 @@
 \header {
 	title = "Fanfare" 
 	composer = "Hamilton Harty"
-	copyright = \markup { \small "© 2010 Michael Morales under the terms of the Creative Commons Attribution ShareAlike 3.0 license" }
- 	tagline = "Typeset by Michael Morales using LilyPond."
+	copyright = \markup { \small "Released under the terms of the Creative Commons Attribution ShareAlike 3.0 license" }
+ 	tagline = "Typeset using LilyPond."
 
 }
 
@@ -34,7 +34,7 @@ staffTrumpetI=\new Staff {
 	\key c \major
 	\clef treble
 	\relative c' { 	
-		r4 c''4-\f ~ \times 2/3 { c8-. b-. c-. } \times 2/3 { b-. a-. b-. }
+		r4 \tempo "Allegro" c''4-\f ~ \times 2/3 { c8-. b-. c-. } \times 2/3 { b-. a-. b-. }
 		\times 2/3 { a g a } eis2-\sf( \< g4) \!
 		r4 c4-^ ~ \times 2/3 { c8 b c } \times 2/3 { b a b }
 		\times 2/3 { a g a } f4-\sf ~ f8.[\< f32 f] g8.[ g32 g]
@@ -64,6 +64,26 @@ staffTrumpetII = \new Staff {
 		d4 ~ d8.[ \< a32 a] a8.[ d32 d] d8.[ fis32 fis]
 		fis2 ~ fis4-\ff-. \! r4
 	\bar "|."
+	}
+}
+
+staffTrumpetIII = \new Staff {
+	\time 4/4
+	\set Staff.instrumentName = "Bb Tpt. 3"
+	\set Staff.midiInstrument = "trumpet"
+	\transposition ais
+	\key c \major
+	\clef treble
+	\relative c' {
+		r4 e'4-\f ~ \times 2/3 { e8 d e } \times 2/3 { d c d }
+		\times 2/3 { c b c } b2.-\sf \<
+		r4 \! e4 ~  \times 2/3 { e8 d e } \times 2/3 { d c d }
+		\times 2/3 { c b c } b4-\sf ~ b8.[ \< b32 b] b8.[ b32 b]
+		cis4 \! a4-^ ~ a8.[ a32 a] \times 2/3 { a8 e a }
+		\times 2/3 { a8 e a } \times 2/3 { a8 e a } \times 2/3 { a8 e f } \times 2/3 { gis a gis }
+		a4 ~ a8.[ \< fis32 fis] fis8.[ a32 a] a8.[ d32 d]
+		d2 ~ d4-\ff \! r4
+
 	}
 }
 
@@ -109,6 +129,7 @@ staffPercussion = \new DrumStaff {
 	<<
 		\staffTrumpetI
 		\staffTrumpetII
+		\staffTrumpetIII
 		\staffTrumpetIV
 		\staffPercussion
 	>>
