@@ -6,7 +6,7 @@
 %This file is based on a public domain score is released under the
 %Creative Commons Attribution ShareAlike 3.0 License.
 %
-%Last updated 28 May 2011 at 22:03 PST
+%Last updated 29 May 2011 at 20:26 PST
 %----------------------------------------------------------------------------
 
 \version "2.12.3"
@@ -29,7 +29,14 @@ staffTrumpetI=\new Staff {
 	\key c \major
 	\clef treble
 	\relative c' { 	
- % Type notes here 
+		r4 c''4-\f ~ \times 2/3 { c8-. b-. c-. } \times 2/3 { b-. a-. b-. }
+		\times 2/3 { a g a } eis2( g4)
+		r4 c4-^ ~ \times 2/3 { c8 b c } \times 2/3 { b a b }
+		\times 2/3 { a g a } f4 ~ f8.[ f32 f] g8.[ g32 g]
+		a4 f4-^ ~ f8.[ f32 f] f8.[ f32 f]
+		e8.[ e32 e] e8.[ e32 e] \times 2/3 { a8 e c } \times 2/3 { e a e }
+		fis8.[ fis32 fis]\< a2.~
+		a2 ~ a4-.-\ff \! r4
 
 	\bar "|."
 	}
@@ -72,9 +79,6 @@ staffPercussion = \new DrumStaff {
 	}
 	\bar "|."
 	}
-
-}
-
 
 \score {
 	<<
